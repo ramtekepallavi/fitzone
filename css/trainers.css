@@ -1,25 +1,24 @@
-.workout{
-    text-align:center;
+.trainers{
     padding:120px 20px;
+    text-align:center;
 }
 
-.workout h1{
+.trainers h1{
     color:gold;
     margin-bottom:40px;
 }
 
-.card{
+.trainer-card{
     background:#222;
-    padding:30px;
+    padding:25px;
     margin:20px auto;
     max-width:400px;
     border:1px solid gold;
     transition:0.3s;
-    cursor:pointer;
 }
 
-.card:hover{
+.trainer-card:hover{
     background:gold;
     color:black;
-    transform:translateY(-5px);
+    transform:scale(1.05);
 }

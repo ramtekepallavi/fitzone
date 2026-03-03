@@ -1,42 +1,82 @@
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:Arial;
-    background:#0f2027;
-    color:white;
-    padding-top:80px;
-    padding-bottom:60px;
+/* ABOUT HERO SECTION */
+.about-hero{
+    padding:140px 20px 80px;
+    text-align:center;
+    animation:fadeSlide 1.2s ease-in-out;
 }
 
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#203a43;
-    text-align:center;
-    padding:15px;
-    border-bottom:2px solid cyan;
+.about-hero h1{
+    font-size:45px;
+    color:gold;
+    margin-bottom:15px;
 }
 
-.logo{color:cyan;font-weight:bold;}
-
-nav a{color:white;margin:10px;text-decoration:none;}
-nav a:hover{color:cyan;}
-
-.about{
-    margin-top:140px;
-    text-align:center;
-    padding:20px;
+.about-hero p{
+    font-size:18px;
+    color:#ccc;
 }
 
-.about h1{color:cyan;margin-bottom:20px;}
+/* ABOUT CONTENT */
+.about-content{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:40px 20px 100px;
+}
 
-footer{
-    position:fixed;
-    bottom:0;
-    width:100%;
-    background:#203a43;
-    text-align:center;
-    padding:15px;
-    border-top:2px solid cyan;
+.about-box{
+    background:#222;
+    padding:30px;
+    width:300px;
+    border:1px solid gold;
+    transition:0.4s;
+    text-align:left;
+}
+
+.about-box h2{
+    color:gold;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    line-height:1.6;
+    color:#ddd;
+}
+
+.about-box ul{
+    list-style:none;
+    padding-left:0;
+}
+
+.about-box ul li{
+    margin-bottom:10px;
+}
+
+/* HOVER EFFECT */
+.about-box:hover{
+    transform:translateY(-8px);
+    background:gold;
+    color:black;
+}
+
+.about-box:hover h2{
+    color:black;
+}
+
+.about-box:hover p,
+.about-box:hover li{
+    color:black;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }

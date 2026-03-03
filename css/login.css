@@ -1,70 +1,33 @@
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:Arial;
-    background:#1a0026;
-    color:white;
-    padding-top:80px;
-    padding-bottom:60px;
-}
-
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#2e003e;
-    text-align:center;
-    padding:15px;
-    border-bottom:2px solid hotpink;
-}
-
-.logo{color:hotpink;font-weight:bold;}
-
-nav a{color:white;margin:10px;text-decoration:none;}
-nav a:hover{color:hotpink;}
-
 .login-section{
-    margin-top:140px;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:120px 20px;
+    flex-wrap:wrap;
 }
 
 .form-box{
-    width:350px;
-    margin:auto;
-    padding:30px;
-    background:#2e003e;
-    border-radius:8px;
+    background:#222;
+    padding:40px;
+    width:320px;
+    border:1px solid gold;
+    transition:0.3s;
+}
+
+.form-box:hover{
+    transform:translateY(-5px);
 }
 
 .form-box h2{
+    color:gold;
     margin-bottom:20px;
-    color:hotpink;
 }
 
-input{
+.form-box input{
     width:100%;
     padding:10px;
-    margin:10px 0;
-    border:none;
-    border-radius:5px;
-}
-
-button{
-    width:100%;
-    padding:10px;
-    background:hotpink;
+    margin-bottom:15px;
+    background:#111;
+    border:1px solid gold;
     color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-footer{
-    position:fixed;
-    bottom:0;
-    width:100%;
-    background:#2e003e;
-    text-align:center;
-    padding:15px;
-    border-top:2px solid hotpink;
 }

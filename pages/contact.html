@@ -13,27 +13,27 @@
     <nav>
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="membership.html">Membership</a>
-        <a href="healthcare.html">Healthcare</a>
         <a href="workout.html">Workout</a>
         <a href="trainers.html">Trainers</a>
-        <a href="gallery.html">Gallery</a>
         <a href="product.html">Product</a>
         <a href="login.html">Login</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
+
 <section class="contact-hero">
     <h1>Contact FITZONE</h1>
-    <p>Were here to help you start your fitness journey</p>
+    <p>Start Your Fitness Journey Today</p>
 </section>
+
 
 <section class="contact-container">
 
+    
     <div class="contact-info">
         <h2>Get In Touch</h2>
-        <p>Have questions about membership, training programs, or healthcare services? Reach out to us!</p>
+        <p>Have questions? We’d love to hear from you.</p>
 
         <div class="info-box">
             <h3>📍 Address</h3>
@@ -42,7 +42,7 @@
 
         <div class="info-box">
             <h3>📞 Phone</h3>
-            <p>+91 7387997548</p>
+            <p>+91 98765 43210</p>
         </div>
 
         <div class="info-box">
@@ -54,7 +54,7 @@
 
     <div class="contact-form">
         <h2>Send Message</h2>
-        <form>
+        <form id="contactForm">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <input type="tel" placeholder="Your Phone">
@@ -65,10 +65,41 @@
 
 </section>
 
+
+<section class="map-section">
+    <h2>Our Location</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen>
+    </iframe>
+</section>
+
+
+<div id="successPopup" class="popup">
+    <div class="popup-content">
+        <h3>✅ Message Sent Successfully!</h3>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+
+<a href="https://wa.me/919876543210" class="whatsapp" target="_blank">💬</a>
+
 <footer>
     © 2026 FITZONE Fitness Club <br>
     Empowering You To Become Stronger Every Day
 </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("successPopup").style.display="flex";
+});
+
+function closePopup(){
+    document.getElementById("successPopup").style.display="none";
+}
+</script>
 
 </body>
 </html>

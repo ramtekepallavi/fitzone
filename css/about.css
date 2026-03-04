@@ -1,17 +1,14 @@
-/* ================= HERO ================= */
-
+/* ABOUT HERO SECTION */
 .about-hero{
-    padding:150px 20px 80px;
+    padding:140px 20px 80px;
     text-align:center;
-    background:#111;
-    animation:fadeIn 1.2s ease-in-out;
+    animation:fadeSlide 1.2s ease-in-out;
 }
 
 .about-hero h1{
-    font-size:50px;
+    font-size:45px;
     color:gold;
     margin-bottom:15px;
-    text-shadow:0 0 15px gold;
 }
 
 .about-hero p{
@@ -19,24 +16,22 @@
     color:#ccc;
 }
 
-/* ================= ABOUT CONTENT ================= */
-
+/* ABOUT CONTENT */
 .about-content{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:40px;
-    padding:60px 20px;
+    padding:40px 20px 100px;
 }
 
 .about-box{
-    background:#1a1a1a;
+    background:#222;
     padding:30px;
     width:300px;
     border:1px solid gold;
-    border-radius:8px;
     transition:0.4s;
-    animation:slideUp 1s ease;
+    text-align:left;
 }
 
 .about-box h2{
@@ -44,78 +39,38 @@
     margin-bottom:15px;
 }
 
-.about-box p,
-.about-box li{
-    color:#ddd;
+.about-box p{
     line-height:1.6;
+    color:#ddd;
 }
 
 .about-box ul{
     list-style:none;
-    padding:0;
+    padding-left:0;
 }
 
-/* Hover Effect */
+.about-box ul li{
+    margin-bottom:10px;
+}
+
+/* HOVER EFFECT */
 .about-box:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     background:gold;
-    box-shadow:0 0 20px gold;
+    color:black;
 }
 
-.about-box:hover h2,
+.about-box:hover h2{
+    color:black;
+}
+
 .about-box:hover p,
 .about-box:hover li{
     color:black;
 }
 
-/* ================= STATS ================= */
-
-.stats-section{
-    display:flex;
-    justify-content:center;
-    gap:60px;
-    padding:80px 20px;
-    background:black;
-    text-align:center;
-    flex-wrap:wrap;
-}
-
-.stat-box h2{
-    font-size:40px;
-    color:gold;
-    animation:pulse 2s infinite;
-}
-
-.stat-box p{
-    color:#ccc;
-}
-
-/* ================= CTA ================= */
-
-.cta-section{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(45deg, gold, #d4af37);
-    color:black;
-}
-
-.cta-section h2{
-    margin-bottom:20px;
-}
-
-.cta-section .btn{
-    background:black;
-    color:gold;
-}
-
-.cta-section .btn:hover{
-    background:white;
-    color:black;
-}
-
-/* ================= ANIMATIONS ================= */
-
-@keyframes fadeIn{
+/* ANIMATION */
+@keyframes fadeSlide{
     from{
         opacity:0;
         transform:translateY(40px);
@@ -123,36 +78,5 @@
     to{
         opacity:1;
         transform:translateY(0);
-    }
-}
-
-@keyframes slideUp{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes pulse{
-    0%{text-shadow:0 0 5px gold;}
-    50%{text-shadow:0 0 20px gold;}
-    100%{text-shadow:0 0 5px gold;}
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:768px){
-    .about-content,
-    .stats-section{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .about-hero h1{
-        font-size:32px;
     }
 }

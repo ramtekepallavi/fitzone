@@ -1,0 +1,33 @@
+/* ================= MEMBERSHIP ================= */
+.membership-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+ 
+.plan-card {
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+ 
+.plan-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,255,170,0.5);
+}
+ 
+.plan-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+ 
+.plan-card ul li {
+    margin: 8px 0;
+}
+ 
+.premium {
+    background: linear-gradient(135deg, #00ffaa, #00cc88);
+    color: #000;
+}

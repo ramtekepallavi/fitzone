@@ -1,0 +1,133 @@
+/* ================= GOOGLE FONT STYLE FEEL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background-color: #F8F9FA;
+    color: #646060;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    background: #6b6a6a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #E63946;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #7c5b5e;
+}
+
+/* ================= HERO SECTION ================= */
+#home {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+#home h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#home button {
+    padding: 12px 30px;
+    border: none;
+    background: #E63946;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#home button:hover {
+    background: rgb(240, 226, 149);
+}
+
+/* ================= SECTION COMMON ================= */
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3d4743;
+}
+
+/* ================= CARD GRID ================= */
+#programs,
+#healthcare,
+#trainers,
+#membership,
+#testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* ================= CARD STYLE ================= */
+#programs div,
+#healthcare div,
+#trainers div,
+#membership div,
+#testimonials div {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+#programs div:hover,
+#healthcare div:hover,
+#trainers div:hover,
+#membership div:hover,
+#testimonials div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+/* ================= FOOTER ================= */
+footer {
+    background: #1D1D1D;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}

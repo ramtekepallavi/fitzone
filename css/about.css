@@ -1,37 +1,55 @@
-/* ABOUT HERO SECTION */
+/* HERO */
 .about-hero{
-    padding:140px 20px 80px;
+    padding:150px 20px 80px;
     text-align:center;
-    animation:fadeSlide 1.2s ease-in-out;
+    animation:fadeIn 1s ease-in-out;
 }
 
 .about-hero h1{
-    font-size:45px;
+    font-size:48px;
     color:gold;
     margin-bottom:15px;
+    text-shadow:0 0 15px gold;
 }
 
 .about-hero p{
-    font-size:18px;
     color:#ccc;
 }
 
-/* ABOUT CONTENT */
+/* INTRO */
+.about-intro{
+    text-align:center;
+    padding:60px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.about-intro h2{
+    color:gold;
+    margin-bottom:20px;
+}
+
+.about-intro p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+/* BOXES */
 .about-content{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:40px;
-    padding:40px 20px 100px;
+    flex-wrap:wrap;
+    padding:60px 20px;
 }
 
 .about-box{
-    background:#222;
+    background:#1a1a1a;
     padding:30px;
-    width:300px;
+    width:280px;
     border:1px solid gold;
     transition:0.4s;
-    text-align:left;
+    border-radius:8px;
 }
 
 .about-box h2{
@@ -39,9 +57,9 @@
     margin-bottom:15px;
 }
 
-.about-box p{
-    line-height:1.6;
-    color:#ddd;
+.about-box p,
+.about-box li{
+    color:#ccc;
 }
 
 .about-box ul{
@@ -49,28 +67,58 @@
     padding-left:0;
 }
 
-.about-box ul li{
-    margin-bottom:10px;
-}
-
-/* HOVER EFFECT */
 .about-box:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
     background:gold;
-    color:black;
 }
 
-.about-box:hover h2{
-    color:black;
-}
-
+.about-box:hover h2,
 .about-box:hover p,
 .about-box:hover li{
     color:black;
 }
 
+/* STATS */
+.about-stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:60px 20px;
+    background:#000;
+    flex-wrap:wrap;
+}
+
+.stat{
+    text-align:center;
+    transition:0.3s;
+}
+
+.stat h3{
+    font-size:40px;
+    color:gold;
+}
+
+.stat p{
+    color:#ccc;
+}
+
+.stat:hover{
+    transform:scale(1.1);
+}
+
+/* CTA */
+.about-cta{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.about-cta h2{
+    color:gold;
+    margin-bottom:20px;
+}
+
 /* ANIMATION */
-@keyframes fadeSlide{
+@keyframes fadeIn{
     from{
         opacity:0;
         transform:translateY(40px);
@@ -78,5 +126,17 @@
     to{
         opacity:1;
         transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .about-content{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .about-stats{
+        gap:40px;
     }
 }

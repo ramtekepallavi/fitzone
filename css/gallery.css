@@ -27,10 +27,21 @@ z-index:1000;
 }
 
 .logo{
-font-size:24px;
-font-weight:bold;
-color:gold;
-letter-spacing:2px;
+    display: flex;
+    align-items: center;   /* vertically align */
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 2px;
+}
+
+.logo img{
+    height: 70px;
+    margin-right: 10px;  
+}
+
+.logo span{
+    font-family: Arial, sans-serif;
 }
 
 nav a{

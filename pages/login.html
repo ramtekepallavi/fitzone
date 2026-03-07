@@ -2,50 +2,39 @@
 <html>
 <head>
     <title>Login | FITZONE</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 
-<header>
-    <div class="logo">FITZONE</div>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="workout.html">Workout</a>
-        <a href="trainers.html">Trainers</a>
-        <a href="product.html">Product</a>
-        <a href="login.html">Login</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-<section>
+<section class="login-section">
+    <div class="login-container">
         <h2>Member Login</h2>
 
         <form action="#" method="post">
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
-            <input type="checkbox" id="remember" name="remember">
-            <label for="remember">Remember Me</label><br><br>
-            <input type="submit" value="Login">
-            <input type="reset" value="Clear">
+        
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <div class="form-buttons">
+                <input type="submit" value="Login">
+                <input type="reset" value="Clear">
+            </div>
         </form>
 
-        <br>
-
-        <p>New Member? <a href="#">Register Here</a></p>
-        <p><a href="#">Forgot Password?</a></p>
-
-    </section>
-
-    <footer>
-        <hr>
-        <p>&copy; 2026 Fitzone Gym | All Rights Reserved</p>
-    </footer>
+        <p>Don't have an account? <a href="register.html">Register Here</a></p>
+        <a href="../index.html" class="back-home">← Back to Home</a>
+    </div>
+</section>
 
 </body>
 </html>
-

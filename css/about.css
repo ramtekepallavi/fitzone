@@ -1,42 +1,71 @@
-/* ================= HERO ================= */
-
+/* HERO */
 .about-hero{
     padding:150px 20px 80px;
     text-align:center;
-    background:#111;
-    animation:fadeIn 1.2s ease-in-out;
+    animation:fadeIn 1s ease-in-out;
+}
+.logo{
+    display: flex;
+    align-items: center;   /* vertically align */
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 2px;
 }
 
+.logo img{
+    height: 70px;
+    margin-right: 10px;  
+}
+
+.logo span{
+    font-family: Arial, sans-serif;
+}
 .about-hero h1{
-    font-size:50px;
+    font-size:48px;
     color:gold;
     margin-bottom:15px;
     text-shadow:0 0 15px gold;
 }
 
 .about-hero p{
-    font-size:18px;
     color:#ccc;
 }
 
-/* ================= ABOUT CONTENT ================= */
+/* INTRO */
+.about-intro{
+    text-align:center;
+    padding:60px 20px;
+    max-width:800px;
+    margin:auto;
+}
 
+.about-intro h2{
+    color:gold;
+    margin-bottom:20px;
+}
+
+.about-intro p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+/* BOXES */
 .about-content{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:40px;
+    flex-wrap:wrap;
     padding:60px 20px;
 }
 
 .about-box{
     background:#1a1a1a;
     padding:30px;
-    width:300px;
+    width:280px;
     border:1px solid gold;
-    border-radius:8px;
     transition:0.4s;
-    animation:slideUp 1s ease;
+    border-radius:8px;
 }
 
 .about-box h2{
@@ -46,20 +75,17 @@
 
 .about-box p,
 .about-box li{
-    color:#ddd;
-    line-height:1.6;
+    color:#ccc;
 }
 
 .about-box ul{
     list-style:none;
-    padding:0;
+    padding-left:0;
 }
 
-/* Hover Effect */
 .about-box:hover{
     transform:translateY(-10px);
     background:gold;
-    box-shadow:0 0 20px gold;
 }
 
 .about-box:hover h2,
@@ -68,53 +94,46 @@
     color:black;
 }
 
-/* ================= STATS ================= */
-
-.stats-section{
+/* STATS */
+.about-stats{
     display:flex;
     justify-content:center;
-    gap:60px;
-    padding:80px 20px;
-    background:black;
-    text-align:center;
+    gap:80px;
+    padding:60px 20px;
+    background:#000;
     flex-wrap:wrap;
 }
 
-.stat-box h2{
-    font-size:40px;
-    color:gold;
-    animation:pulse 2s infinite;
+.stat{
+    text-align:center;
+    transition:0.3s;
 }
 
-.stat-box p{
+.stat h3{
+    font-size:40px;
+    color:gold;
+}
+
+.stat p{
     color:#ccc;
 }
 
-/* ================= CTA ================= */
-
-.cta-section{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(45deg, gold, #d4af37);
-    color:black;
+.stat:hover{
+    transform:scale(1.1);
 }
 
-.cta-section h2{
+/* CTA */
+.about-cta{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.about-cta h2{
+    color:gold;
     margin-bottom:20px;
 }
 
-.cta-section .btn{
-    background:black;
-    color:gold;
-}
-
-.cta-section .btn:hover{
-    background:white;
-    color:black;
-}
-
-/* ================= ANIMATIONS ================= */
-
+/* ANIMATION */
 @keyframes fadeIn{
     from{
         opacity:0;
@@ -126,33 +145,172 @@
     }
 }
 
-@keyframes slideUp{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes pulse{
-    0%{text-shadow:0 0 5px gold;}
-    50%{text-shadow:0 0 20px gold;}
-    100%{text-shadow:0 0 5px gold;}
-}
-
-/* ================= RESPONSIVE ================= */
-
+/* RESPONSIVE */
 @media(max-width:768px){
-    .about-content,
-    .stats-section{
+    .about-content{
         flex-direction:column;
         align-items:center;
     }
 
-    .about-hero h1{
-        font-size:32px;
+    .about-stats{
+        gap:40px;
+    }
+}
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid gold;
+    animation: fadeUp 1s ease;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    color: gold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+footer h3::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+footer h3:hover::after {
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+footer ul li {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer ul li:hover {
+    color: gold;
+    transform: translateX(5px);
+}
+
+/* Subscribe form */
+
+footer .subscribe-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+footer .subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: 0.3s;
+}
+
+footer .subscribe-form input[type="email"]:focus {
+    box-shadow: 0 0 10px gold;
+}
+
+footer .subscribe-form button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .subscribe-form button:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons span {
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ccc;
+}
+
+footer .social-icons span:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+/* Footer bottom text */
+
+footer p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+    animation: fadeUp 1.2s ease;
+}
+
+/* Footer columns */
+
+footer .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Footer */
+
+@media(max-width:900px){
+    footer .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-column{
+        text-align: center;
+    }
+    footer .social-icons span{
+        margin-right:8px;
+    }
+}
+
+/* Animation keyframes */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }

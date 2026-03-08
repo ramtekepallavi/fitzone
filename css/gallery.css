@@ -155,49 +155,159 @@ box-shadow:0 0 25px gold;
 transform:translateY(-6px);
 }
 
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:20px;
-border-top:2px solid gold;
-background:black;
-margin-top:60px;
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid gold;
+    animation: fadeUp 1s ease;
 }
 
-/* ANIMATION */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* RESPONSIVE */
+footer h3 {
+    margin-bottom: 15px;
+    color: gold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
 
-@media(max-width:1200px){
-.gallery-container{
-grid-template-columns:repeat(3,1fr);
+footer h3::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
+
+footer h3:hover::after {
+    width: 100%;
 }
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+footer ul li {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+footer ul li:hover {
+    color: gold;
+    transform: translateX(5px);
+}
+
+/* Subscribe form */
+
+footer .subscribe-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+footer .subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: 0.3s;
+}
+
+footer .subscribe-form input[type="email"]:focus {
+    box-shadow: 0 0 10px gold;
+}
+
+footer .subscribe-form button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .subscribe-form button:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons span {
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ccc;
+}
+
+footer .social-icons span:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+/* Footer bottom text */
+
+footer p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+    animation: fadeUp 1.2s ease;
+}
+
+/* Footer columns */
+
+footer .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Footer */
 
 @media(max-width:900px){
-.gallery-container{
-grid-template-columns:repeat(2,1fr);
-}
+    footer .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-column{
+        text-align: center;
+    }
+    footer .social-icons span{
+        margin-right:8px;
+    }
 }
 
-@media(max-width:600px){
-.gallery-container{
-grid-template-columns:1fr;
-}
+/* Animation keyframes */
 
-nav{
-display:none;
-}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
